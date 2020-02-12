@@ -1,11 +1,17 @@
-body {
-    font-family: 'Roboto Condensed', Arial, sans-serif;
+* {
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-.container, .container-fluid {
+
+.container .btn {
     margin: 0;
+    margin-top: -180%;
     padding: 0;
-}
+    left: 0;
+    /* color: #f72210; */
+    opacity: 80%;
+    border-radius: 0;
+  }
 
 .social-icons {
    align-content: flex-end;
@@ -25,66 +31,21 @@ img, .img-thumbnail {
 
 .top-logo {
     fill: #fff;
-    padding-bottom: 15%;
 }
 
 .nav-logo {
     fill: #f72210;
 }
 
-.header-top {
-    background-color: #f72210;
-    padding: 0;
-    padding-top: 2%;
-    color: #fff;
-}
-
-.nav-bar-default {
-     border-bottom: 1px solid #000; /*#f4f5f6;; */
-}
-
-.col-1, .col-2 {
-    padding: 0;
-    padding-top: 2%;
-}
-
-.col-2 {
-    font-weight: 600;
-    text-align: right;
-}
-
-.col-2 span {
-    background-color: #fff;
-    color:  #f72210;
-}
-
-.first-row {
-    color: #000;
-}
-
-.page-nav {
-    border-bottom: 2px solid #f4f5f6;
-    padding: 0.5em 0;
-    display: flex;
-    list-style: "|";
-   
-}
-
-.page-nav li {
-    color: #f4f5f6;
-    width: fit-content;
-    line-height: 24px;
-    margin: 0 0.35em;
-    text-align: center;
-
-}
 
 .page-nav li a {
     color: #000;
-    font-weight: 700;
-
 }
 
+
+.page-nav li a:hover {
+    color: #f72210;
+}
 
 .opinion img {
     float: left;
@@ -93,5 +54,18 @@ img, .img-thumbnail {
 
 
 main {
-    display: flex;
+   position: relative;
+} 
+
+
+.row .card {
+    border: none;
+    padding: 0;
+    border: 0;
+
+}
+
+article, .col-md-3 {
+    margin: 0;
+    padding: 0;
 }
