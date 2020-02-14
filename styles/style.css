@@ -4,7 +4,7 @@
 
 main {
     position: relative;
- } 
+} 
 
 .top-logo {
     fill: #fff;
@@ -14,12 +14,19 @@ main {
     fill: #f72210;
 }
 
+.culture-travel h5:hover {
+    text-decoration: none;
+}
 
-.page-nav li a {
+h5, h6, .page-nav li a, .nav-bottom li a:hover  {
     color: #000;
 }
 
-.page-nav li a:hover {
-    color: #f72210;
+h5:hover {
+    text-decoration: underline;
+    text-decoration-color: #f72210;
 }
 
+.page-nav li a:hover, a h6:hover{
+    color: #f72210;
+}
