@@ -2,20 +2,9 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-
-.container .btn {
-    margin: 0;
-    margin-top: -180%;
-    padding: 0;
-    left: 0;
-    /* color: #f72210; */
-    opacity: 80%;
-    border-radius: 0;
-  }
-
-.social-icons {
-   align-content: flex-end;
-}
+main {
+    position: relative;
+ } 
 
 .top-logo {
     fill: #fff;
@@ -30,23 +19,7 @@
     color: #000;
 }
 
-
 .page-nav li a:hover {
     color: #f72210;
 }
 
-main {
-   position: relative;
-} 
-
-.row .card {
-    border: none;
-    padding: 0;
-    border: 0;
-
-}
-
-article, .col-md-3 {
-    margin: 0;
-    padding: 0;
-}
