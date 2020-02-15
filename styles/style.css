@@ -2,24 +2,12 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-main {
-    position: relative;
-} 
-
 .top-logo {
     fill: #fff;
 }
 
 .nav-logo {
     fill: #f72210;
-}
-
-.culture-travel h5:hover {
-    text-decoration: none;
-}
-
-h5, h6, .page-nav li a, .nav-bottom li a:hover  {
-    color: #000;
 }
 
 h5:hover {
@@ -30,3 +18,17 @@ h5:hover {
 .page-nav li a:hover, a h6:hover{
     color: #f72210;
 }
+
+.culture-travel h5:hover, .image h5 span:hover {
+    text-decoration: none;
+}
+
+.image-tag span {
+    background-color: #fff;
+    opacity: 80%;
+}
+
+h5, h6, .page-nav li a, .nav-bottom li a:hover  {
+    color: #000;
+}
+
