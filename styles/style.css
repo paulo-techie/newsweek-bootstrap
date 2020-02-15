@@ -19,13 +19,12 @@ h5:hover {
     color: #f72210;
 }
 
-.culture-travel h5:hover, .image h5 span:hover {
-    text-decoration: none;
+.culture-travel h5:hover {
+    text-decoration: none;g
 }
 
-.image-tag span {
-    background-color: #fff;
-    opacity: 80%;
+.image-tag {
+    opacity: 75%;
 }
 
 h5, h6, .page-nav li a, .nav-bottom li a:hover  {
