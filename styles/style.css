@@ -26,7 +26,7 @@
   }
   
   .culture-travel-small {
-        display: block !important;
+    display: block !important;
   }
 }
   
@@ -61,4 +61,3 @@ h5:hover {
 h5, h6, .navbar-nav li a, .nav-bottom li a:hover  {
     color: #000;
 }
-
