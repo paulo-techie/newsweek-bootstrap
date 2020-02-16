@@ -1,3 +1,35 @@
+@media only screen and (max-width: 992px) {
+  .featured-stories {
+    position: relative !important;
+  }
+
+  .in-the-mag {
+    flex-flow: wrap !important;
+  }
+
+  .image-mag {
+    display: none !important;
+  }
+
+  .bars {
+    display: inline !important;
+  }
+
+  /* .more-stories {
+    display: block !important;
+  } */
+
+  .nav-bottom li {
+    border: none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .culture-travel-big, .bohemian {
+      display: none !important;
+    }
+  }
+
 * {
     font-family: "Roboto Condensed", sans-serif;
 }
@@ -9,25 +41,24 @@
 .nav-logo {
     fill: #f72210;
 }
+.bars, .culture-travel-small {
+  display: none;
+}
 
 h5:hover {
     text-decoration: underline;
     text-decoration-color: #f72210;
 }
 
-.page-nav li a:hover, a h6:hover{
+.navbar-nav li a:hover, a h6:hover{
     color: #f72210;
-}
-
-.culture-travel h5:hover {
-    text-decoration: none;g
 }
 
 .image-tag {
     opacity: 75%;
 }
 
-h5, h6, .page-nav li a, .nav-bottom li a:hover  {
+h5, h6, .navbar-nav li a, .nav-bottom li a:hover  {
     color: #000;
 }
 
