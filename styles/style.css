@@ -20,17 +20,15 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .culture-travel-big, .bohemian {
-      display: none !important;
-    }
+    display: none !important;
   }
-
-  @media only screen and (max-width: 576px) {
-    .culture-travel-small {
+  
+  .culture-travel-small {
         display: block !important;
-      }
   }
+}
   
 * {
     font-family: "Roboto Condensed", sans-serif;
