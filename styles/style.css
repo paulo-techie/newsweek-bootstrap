@@ -1,35 +1,36 @@
 @media only screen and (max-width: 992px) {
-  .featured-stories {
-    position: relative !important;
-  }
+    .featured-stories {
+        position: relative !important;
+    }
 
-  .in-the-mag {
-    flex-flow: wrap !important;
-  }
+    .in-the-mag {
+        flex-flow: wrap !important;
+    }
 
-  .image-mag {
-    display: none !important;
-  }
+    .image-mag {
+        display: none !important;
+    }
 
-  .bars {
-    display: inline !important;
-  }
+    .bars {
+        display: inline !important;
+    }
 
-  .nav-bottom li {
-    border: none !important;
-  }
+    .nav-bottom li {
+        border: none !important;
+    }
 }
 
 @media only screen and (max-width: 576px) {
-  .culture-travel-big, .bohemian {
-    display: none !important;
-  }
-  
-  .culture-travel-small {
-    display: block !important;
-  }
+    .culture-travel-big,
+    .bohemian {
+        display: none !important;
+    }
+
+    .culture-travel-small {
+        display: block !important;
+    }
 }
-  
+
 * {
     font-family: "Roboto Condensed", sans-serif;
 }
@@ -41,8 +42,17 @@
 .nav-logo {
     fill: #f72210;
 }
-.bars, .culture-travel-small {
-  display: none;
+
+.bars,
+.culture-travel-small {
+    display: none;
+}
+
+h5,
+h6,
+.navbar-nav li a,
+.nav-bottom li a:hover {
+    color: #000;
 }
 
 h5:hover {
@@ -50,14 +60,11 @@ h5:hover {
     text-decoration-color: #f72210;
 }
 
-.navbar-nav li a:hover, a h6:hover{
+.navbar-nav li a:hover,
+a h6:hover {
     color: #f72210;
 }
 
 .image-tag {
     opacity: 0.8;
-}
-
-h5, h6, .navbar-nav li a, .nav-bottom li a:hover  {
-    color: #000;
 }
