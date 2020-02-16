@@ -15,10 +15,6 @@
     display: inline !important;
   }
 
-  /* .more-stories {
-    display: block !important;
-  } */
-
   .nav-bottom li {
     border: none !important;
   }
@@ -30,6 +26,12 @@
     }
   }
 
+  @media only screen and (max-width: 576px) {
+    .culture-travel-small {
+        display: block !important;
+      }
+  }
+  
 * {
     font-family: "Roboto Condensed", sans-serif;
 }
