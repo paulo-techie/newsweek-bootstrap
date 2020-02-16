@@ -55,7 +55,7 @@ h5:hover {
 }
 
 .image-tag {
-    opacity: 75%;
+    opacity: 0.8;
 }
 
 h5, h6, .navbar-nav li a, .nav-bottom li a:hover  {
