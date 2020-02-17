@@ -24,6 +24,7 @@
         border: none !important;
     }
 
+
     #Layer_1 {
         float: left;
         height: 55px;
@@ -45,6 +46,13 @@
     .culture-travel-big,
     .bohemian {
         display: none !important;
+    }
+
+    .top-story,
+    .culture-travel-small,
+    .featured-stories,
+    .more-stories {
+        padding: 0 15px;
     }
 
     .culture-travel-small {
