@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a1f1d67c06.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,640 +14,835 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
     <title>Newsweek - News, Analysis, Politics, Business, Technology</title>
 </head>
-<body>
-    <div class="container container-fluid">
-        <div class="row header-top">
-        <div class="col-1 col-md-4">Wed, Feb 05, 2020</div>
-        <div class="header-middle col-md-4">        
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve"><g>
-            <path class="st0 top-logo" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
-            </g></svg>
-        </div>
-        <div class="col-2 col-md-4">
-            <p>SIGN IN&nbsp;&nbsp;<span>&nbsp;&nbsp;SUBSCRIBE&nbsp;&nbsp;>&nbsp;</span></p> 
-        </div>
-        </div>
-        <div class="header-bottom">
-        <nav class="navbar navbar-default row">
-            <ul class="page-nav col-md-10">
-                <li><a href="#">U.S.</a></li>
-                <li><a href="#">World</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Tech & Science</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">Newsgeek</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Health</a></li>
-                <li><a href="#">The Debate</a></li>
-                <li><a href="#">Vantage</a></li>
-                <li><a href="#">Weather</a></li>
+<body class="bg-light">
+    <div class="container-fluid bg-white">
+        <ul class="bg-danger row header-top text-white justify-content-between text-nowrap list-unstyled">
+            <li class="p-2 pt-5 header-date font-weight-light">Wed, Feb 05, 2020</li>
+            <li class="header-middle p-2" >        
+                <a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve"><g>
+                <path class="st0 top-logo" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                </g></svg></a>
+            </li>
+            <li class="col-2 flex-xs-6">
+                <div class="header-right-lg pt-5">
+                    <span class="float-right text-light"><a href="#" class="text-decoration-none text-light">SIGN IN</a>&nbsp;&nbsp;<span class="bg-white p-1">&nbsp;&nbsp;<a href="#" class="text-decoration-none text-dark">SUBSCRIBE&nbsp;&nbsp;>&nbsp;</a></span><span class="bars px-2 d-md-down"><a href="#" class="text-decoration-none text-light"><i class="fas fa-bars"></i></a></span></span>
+                </div>
+                <div class="header-right-xs pt-4">
+                    <span class="float-right text-light"><a href="#" class="text-decoration-none text-light">SIGN IN</a>&nbsp;&nbsp;<span class="bg-white p-1">&nbsp;&nbsp;<a href="#" class="text-decoration-none text-dark">SUBSCRIBE&nbsp;&nbsp;>&nbsp;</a></span><span class="bars px-2 d-md-down"><a href="#" class="text-decoration-none text-light"><i class="fas fa-bars"></i></a></span></span>
+                </div>
+            </li>
+        </ul>
+        <div class="d-none d-lg-block header-bottom pb-2 border-bottom">
+        <nav class="navbar navbar-expand-md row mt-1 px-3 pb-0">
+            <ul class="col-lg-12 navbar-nav d-flex justify-content-between text-nowrap font-weight-bolder list-unstyled">
+                <li class="nav-item"><a href="#" class="text-decoration-none nav-link">U.S.</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">World</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Business</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Tech & Science</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Culture</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Newsgeek</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Sports</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Health</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">The Debate</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Vantage</a></li>
+                <li class="nav-item border-left"><a href="#" class="text-decoration-none nav-link">Weather</a></li>
+                <li class="nav-item">
+                <form class="form-inline">
+                    <div class="input-group">
+                      <input type="text" class="form-control border-0 w-100 text-right pr-2" placeholder="Search" aria-label="search" aria-describedby="basic-addon1">
+                      <div class="input-group-append">
+                        <span class="input-group-text border-0 bg-white" id="basic-addon1"><i class="fas fa-search"></i></span>
+                      </div>
+                    </div>
+                </form>
+                </li>
             </ul>
-            <div class="col-md-2 form-item form-type-textfield form-item-search-block-form col-md-2">
-                <input title="Search" placeholder="Search" type="text" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128" class="form-text">
-                <label class="element-invisible" for="edit-search-block-form--4"></label>
-            </div>
         </nav>
         </div>
-        <main class="row">
-            <div class="col-md-3">
-                <article>
-                    <h5>FEATURED STORIES</h5>
-                    <figure>
-                        <img src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt="">
-                        <figcaption>U.S.</figcaption>
-                    </figure>
-                    <h3>Compare Trump's Speech About Senate Impeachment Acquittal to Clinton's </h3>
-                    <p>President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
-                </article>
-                <article>
-                    <h5>FEATURED STORIES</h5>
-                    <figure>
-                        <img src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt="">
-                        <figcaption>U.S.</figcaption>
-                    </figure>
-                    <h3>Compare Trump's Speech About Senate Impeachment Acquittal to Clinton's </h3>
-                    <p>President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
-                </article>
-                <article>
-                    <h5>FEATURED STORIES</h5>
-                    <figure>
-                        <img src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt="">
-                        <figcaption>U.S.</figcaption>
-                    </figure>
-                    <h3>Compare Trump's Speech About Senate Impeachment Acquittal to Clinton's </h3>
-                    <p>President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
-                </article>
-                <article>
-                    <h5>FEATURED STORIES</h5>
-                    <figure>
-                        <img src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt="">
-                        <figcaption>U.S.</figcaption>
-                    </figure>
-                    <h3>Compare Trump's Speech About Senate Impeachment Acquittal to Clinton's </h3>
-                    <p>President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
-                </article>
-            </div>
-            <div class="col-md-6">
-                <article>
-                    <h5>FEATURED STORIES</h5>
-                    <figure>
-                        <img src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt="">
-                        <figcaption>U.S.</figcaption>
-                    </figure>
-                    <h3>Compare Trump's Speech About Senate Impeachment Acquittal to Clinton's </h3>
-                    <p>President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
-                </article>
-            <section class="row">
-                <h5>CULTURE & TRAVEL</h5>
-                <div class="col-md-6">
-                    <img src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt="">
-                    <h5>Subway Stations That Will Stop You in Your Tracks</h5>
-                    <p>From space-age designs to murals, artists and architects have transformed these 10 stunning stations around the world into contemplative and artistic spaces</p>
-                    <p>Architecture</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="" alt="">
-                    <h5>Subway Stations That Will Stop You in Your Tracks</h5>
-                    <p>From space-age designs to murals, artists and architects have transformed these 10 stunning stations around the world into contemplative and artistic spaces</p>
-                    <p>Architecture</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt="">
-                    <h5>Subway Stations That Will Stop You in Your Tracks</h5>
-                    <p>From space-age designs to murals, artists and architects have transformed these 10 stunning stations around the world into contemplative and artistic spaces</p>
-                    <p>Architecture</p>
-                </div>
-                <div class="row-md-6">
-                    <img src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt="">
-                    <h5>Subway Stations That Will Stop You in Your Tracks</h5>
-                    <p>From space-age designs to murals, artists and architects have transformed these 10 stunning stations around the world into contemplative and artistic spaces</p>
-                    <p>Architecture</p>
-                </div>
-            </section class="row">
-            <section>
-                <h5>OPINION</h5>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
+        <main class="row row-fluid border-0">
+            <section class="featured-stories d-none d-sm-block col-sm-5 col-lg-3 sticky-top h-100 border-bottom mb-3">
+                    <h6 class="text-secondary  mt-3">FEATURED STORIES</h6>
+                    <div class="border-0 card my-2">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 font-weight-bold">POLITICS</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                            <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        </div>
+                    </div>
+                    <div class="border-0 card my-2">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                            <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        </div>
+                    </div>
+                    <div class="border-0 card my-2">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                            <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        </div>
+                    </div>
+                    <div class="border-0 card my-2">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                            <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        </div>
+                    </div>
+                    <div class="border-0 card my-2">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                            <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        </div>
+                    </div>
+            </section>
+            <div class="col-sm-7 col-lg-6 m-0 p-0">
+                <section class="border-bottom mb-3">
+                    <h6 class="top-story text-secondary mt-3">TOP STORY</h6>
+                    <div class="card featured-stories border-0">
+                        <a href="#" class=" text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">WORLD</span></h5></a>
+                        <div class="card-body my-4 p-0 ">
+                            <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                            <p class="card-text">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        </div>
+                    </div>               
+                </section>
+                <section class="culture-travel-big bg-light pt-2">
+                    <h6 class="text-secondary p-1">CULTURE & TRAVEL</h6>
+                    <div class="border-0 row mx-0 px-0">
+                    <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                        <a href="#" class=" text-decoration-none"><img class="card-img-top mx-0 pr-2 pl-0" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                        <div class="card-body">
+                            <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                            <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                            <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                        </div>
+                    </div>
+                    <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top mx-0 pr-0 pl-2" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                        <div class="card-body">
+                            <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                            <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                            <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                        </div>
+                    </div>
+                    <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top mx-0 pr-2 pl-0" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                        <div class="card-body">
+                            <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                            <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                            <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                        </div>
+                    </div>
+                    <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                        <a href="#" class=" text-decoration-none"><img class="card-img-top mx-0 pr-0 pl-2" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                        <div class="card-body">
+                            <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                            <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                            <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
+            </section>
+            <section class="more-stories">
+                <h6 class="text-secondary mt-4 p-2">MORE STORIES</h6>
+                <div class="media m-0 p-0">
+                    <a href="#" class=" text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="p-2" alt=""></a>
+                    <div class="mt-2 media-body m-0 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
                     </div>
                 </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
+                <div class="media m-0 p-0">
+                    <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="p-2" alt=""></a>
+                    <div class="mt-2 media-body m-0 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
                     </div>
                 </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
+                <div class="media m-0 p-0">
+                    <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="p-2" alt=""></a>
+                    <div class="mt-2 media-body m-0 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
                     </div>
                 </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                    <div>
-                    <h4>Bernie Sanders Declares Victory in Iowa Caucuses</h4>
-                    <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
+                <div class="media m-0 p-0">
+                    <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="p-2" alt=""></a>
+                    <div class="mt-2 media-body m-0 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p>While campaigning in New Hampshire, Senator Bernie Sanders delivered a victory speech for the Iowa caucuses, while the final precincts are still reporting.</p>
                     </div>
                 </div>
                 </section>
+            <section class="culture-travel-small bg-light pt-2">
+                <h6 class="text-secondary p-1">CULTURE & TRAVEL</h6>
+                <div class="border-0 row mx-0 px-0">
+                <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                    <a href="#" class=" text-decoration-none"><img class="card-img-top mx-0 pr-2 pl-0" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                    <div class="card-body">
+                        <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                        <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                    </div>
+                </div>
+                <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top mx-0 pr-0 pl-2" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                    <div class="card-body">
+                        <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                        <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                    </div>
+                </div>
+                <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top mx-0 pr-2 pl-0" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                    <div class="card-body">
+                        <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                        <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                    </div>
+                </div>
+                <div class="border-0 p-0 col-sm-6 col-lg-6 card featured-stories bg-light">
+                    <a href="#" class=" text-decoration-none"><img class="card-img-top mx-0 pr-0 pl-2" src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.webp?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054" alt=""></a>
+                    <div class="card-body">
+                        <a href="#" class="culture-travel text-decoration-none"><h5 class="text-decoration-none card-title font-weight-light p-0">Subway Stations That Will Stop You in Your Tracks</h5></a>
+                        <p class="card-text text-secondary">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                        <a href="#" class="btn-secondary border-0 px-1 font-weight-normal text-decoration-none">Architecture</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <section class="opinion">
-                    <h6>OPINION</h6>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h5>
-                        <h6>By Doug Gordon</h6>
+            </section>
+            <section class="featured-stories d-block d-sm-none h-100 border-bottom mb-3">
+                <h6 class="text-secondary  mt-3">FEATURED STORIES</h6>
+                <div class="border-0 card my-2">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                    <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 font-weight-bold">POLITICS</span></h5></a>
+                    <div class="card-body mt-3 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                    </div>
+                </div>
+                <div class="border-0 card my-2">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                    <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                    <div class="card-body mt-3 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                    </div>
+                </div>
+                <div class="border-0 card my-2">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                    <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                    <div class="card-body mt-3 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                    </div>
+                </div>
+                <div class="border-0 card my-2">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                    <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                    <div class="card-body mt-3 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                    </div>
+                </div>
+                <div class="border-0 card my-2">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565542/donald-trump-impeachment-senate-acquittal-speech-clinton.webp?w=397&h=265&q=90&f=75d4d3d91feeae981415c7338cf26b67" alt=""></a>
+                    <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                    <div class="card-body mt-3 p-0">
+                        <a href="#"><h5 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h5></a>
+                        <p class="card-text mb-3">President Donald Trump's speech came more than 20 years after President Bill Clinton's and focused on praising his supporters and lambasting his opponents.</p>
+                    </div>
+                </div>
+        </section>
+            </div>
+            <div class="col-sm-12 col-lg-3 sticky-top h-100">
+                <section class="opinion mt-3 p-0">
+                    <h6 class="text-secondary">OPINION</h6>
+                    <div class="border-bottom media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="my-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="m-0 p-0 font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h5>
-                        <h6>By Doug Gordon</h6>
+                    <div class="border-bottom media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="my-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="m-0 p-0 font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h5>
-                        <h6>By Doug Gordon</h6>
+                    <div class="border-bottom media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="my-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="m-0 p-0 font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h5>
-                        <h6>By Doug Gordon</h6>
+                    <div class="border-bottom media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="my-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="m-0 p-0 font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h5>
-                        <h6>By Doug Gordon</h6>
+                    <div class="border-bottom media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="my-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="m-0 p-0 font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h6>
-                        <h5>By Doug Gordon</h5>
+                    <div class="border-bottom media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="my-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="m-0 p-0 font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="img-rounded" alt="">
-                        <div>
-                        <h5>Republicans Have Just Green-Lit Open Season on Our Elections </h5>
-                        <h6>By Doug Gordon</h6>
+                    <div class="media m-0 p-0">
+                        <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1561683/doug-gordon.webp?w=63&h=63&f=2ee0e0bead2b09866ef97374e69a1501" class="rounded p-2" alt=""></a>
+                        <div class="mt-2 media-body m-0 p-0">
+                            <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Republicans Have Just Green-Lit Open Season on Our Elections </h6></a>
+                            <p class="font-weight-bold font-size-small text-secondary text-uppercase">By Doug Gordon</p>
                         </div>
                     </div>
                     </section>
                     <section>
-                        <h5>OPINION</h5>
-                        <div>
-                            <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                            <div>
-                            <h5>Bernie Sanders Declares Victory in Iowa Caucuses</h5>
+                        <h6 class="text-secondary p-0 mt-4">LATEST NEWS</h6>
+                        <div class="border-bottom media m-0 py-2">
+                            <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="pr-2" alt=""></a>
+                            <div class="mt-2 media-body m-0 p-0">
+                                <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
                             </div>
                         </div>
-                        <div>
-                            <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                            <div>
-                            <h5>Bernie Sanders Declares Victory in Iowa Caucuses</h5>
+                        <div class="border-bottom media m-0 py-2">
+                            <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="pr-2" alt=""></a>
+                            <div class="mt-2 media-body m-0 p-0">
+                                <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
                             </div>
                         </div>
-                        <div>
-                            <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                            <div>
-                            <h5>Bernie Sanders Declares Victory in Iowa Caucuses</h5>
+                        <div class="border-bottom media m-0 py-2">
+                            <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="pr-2" alt=""></a>
+                            <div class="mt-2 media-body m-0 p-0">
+                                <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+
                             </div>
                         </div>
-                        <div>
-                            <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                            <div>
-                            <h5>Bernie Sanders Declares Victory in Iowa Caucuses</h5>
+                        <div class="border-bottom media m-0 py-2">
+                            <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="pr-2" alt=""></a>
+                            <div class="mt-2 media-body m-0 p-0">
+                                <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+
                             </div>
                         </div>
-                        <div>
-                            <img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" alt="">
-                            <div>
-                            <h5>Bernie Sanders Declares Victory in Iowa Caucuses</h5>
+                        <div class="media m-0 py-2">
+                            <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp?w=135&h=90&f=bea6d240cb9d12eedaa983d96e252911" class="pr-2" alt=""></a>
+                            <div class="mt-2 media-body m-0 p-0">
+                                <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+
                             </div>
                         </div>
-                </div>
+                        </section>
+            </div>
         </main>
         <aside>
-            <section class="in-the-magazine">
-            <h4>IN THE MAGAZINE</h4>
             <div class="row"> 
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                <div class="border-0 card mt-4 pt-5 col-sm-3 col-lg-3">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1564924/february-14-2020-cover.webp?w=290&h=387&q=90&f=521477710612e7c43cd8ec257c0271e3" alt=""></a>
+                    <div class="card-footer btn-light">
+                        <a href="#" class="text-decoration-none"><h6 class="text-center text-dark font-weight-bold my-0">SEE ALL FEATURES&nbsp;&nbsp;></h6></a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                <section class="col-sm-9 col-lg-9 p-0 m-0">
+                    <h4 class="text-center font-weight-bold my-4 border-bottom py-3"><span class="bg-danger text-light font-weight-bold p-1">&nbsp;N&nbsp;</span>&nbsp;IN THE MAGAZINE</h4>
+                    <div class="in-the-mag d-flex">
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                            <div class="card-body mt-3 p-0">
+                                <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span> POLITICS</h5>                    
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                            </div>
+                        </div>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                            <div class="card-body mt-3 p-0">
+                                <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span> POLITICS</h5>                    
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                            </div>
+                        </div>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                            <div class="card-body mt-3 p-0">
+                                <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span> POLITICS</h5>                    
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="row mt-3"> 
+                <div class="border-0 card col-sm-3 col-lg-3">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                    <div class="card-body mt-3 p-0">
+                        <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span> POLITICS</h5>                    
+                        <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                <div class="border-0 card col-sm-3 col-lg-3">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                    <div class="card-body mt-3 p-0">
+                        <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span> POLITICS</h5>                    
+                        <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                <div class="border-0 card col-sm-3 col-lg-3">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                    <div class="card-body mt-3 p-0">
+                        <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span> POLITICS</h5>                    
+                        <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
-                </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
-                </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
-                </div>
-                <div class="col-md-3">
-                    <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                    <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                    <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                <div class="border-0 card col-sm-3 col-lg-3">
+                    <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1565383/fe-presidential-names-01.webp?w=466&h=311&l=27&t=28&q=90&f=265656a1fc78855627d5f71412792d3e" alt=""></a>
+                    <div class="card-body mt-3 p-0">
+                        <h5 class="card-title font-weight-bold text-danger text-decoration-none  p-0"><span class="bg-danger text-light">&nbsp;FEATURES&nbsp;</span>POLITICS</h5>                    
+                        <a href="#"><h5 class="card-title font-weight-bold p-0">Reagan Is Beating Obama in the Race To Name Things After Former Presidents</h5></a>                    
+                    </div>
                 </div>
             </div>
-            </section>
-            <section class="editors-pick">
-                <h4>EDITOR'S PICK</h4>
+            <section>
+                <h4 class="text-center font-weight-bold my-4 border-bottom py-3"><span class="bg-danger text-light font-weight-bold p-1">&nbsp;N&nbsp;</span>&nbsp;EDITOR'S PICK</h4>
                 <div class="row"> 
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">POLITICS</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">POLITICS</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">U.S.</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">TECH & SCIENCE</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">CULTURE</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">TRAVEL</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">SPORTS</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                        <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                        <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                    <div class="border-0 card col-sm-6 col-lg-3">
+                        <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566795/deepwater-horizon-oil-spill.webp?w=397&h=265&f=3894d7ed42d75a126f6fadf60e3df653" alt=""></a>
+                        <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light py-1 px-3 text-decoration-none font-weight-bold">BUSINESS</span></h5></a>
+                        <div class="card-body mt-3 p-0">
+                            <a href="#"><h5 class="card-title font-weight-bold p-0">'Invisible' Oil Made Deepwater Spill Much Worse Than Previously Thought</h5></a>                    
+                            <p>The "toxic extent" of the spill could have been up to 30 percent greater than what previous satellite data has suggested.</p>
+                        </div>
                     </div>
                 </div>
                 </section>
-                <section class="featured-slideshows">
-                    <h4>FEATURED SLIDESHOWS</h4>
+                <section class="bohemian border-bottom pb-2 mb-4">
+                    <h4 class="text-center font-weight-bold my-4 border-bottom py-3"><span class="bg-danger text-light font-weight-bold p-1 border border-dark">&nbsp;N&nbsp;</span>&nbsp;FEATURED SLIDESHOWS</h4>
                     <div class="row"> 
-                        <div class="col-md-4">
-                            <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                            <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                            <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light text-decoration-none font-weight-bold border border-danger px-2">4</span></h5></a>
+                            <div class="card-body mt-3 p-0">
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Inside the Last Bohemian Apartments of the Storied Hotel Chelsea</h5></a>                    
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                            <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                            <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light text-decoration-none font-weight-bold border border-danger px-2">10</span></h5></a>
+                            <div class="card-body mt-3 p-0">
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Inside the Last Bohemian Apartments of the Storied Hotel Chelsea</h5></a>                    
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                            <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                            <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light text-decoration-none font-weight-bold border border-danger px-2">1</span></h5></a>
+                            <div class="card-body mt-3 p-0">
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Inside the Last Bohemian Apartments of the Storied Hotel Chelsea</h5></a>                    
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                            <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                            <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light text-decoration-none font-weight-bold border border-danger px-2">2</span></h5></a>
+                            <div class="card-body mt-3 p-0">
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Inside the Last Bohemian Apartments of the Storied Hotel Chelsea</h5></a>                    
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                            <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                            <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light text-decoration-none font-weight-bold border border-danger px-2">9</span></h5></a>
+                            <div class="card-body mt-3 p-0">
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Inside the Last Bohemian Apartments of the Storied Hotel Chelsea</h5></a>                    
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="https://d.newsweek.com/en/full/1564166/fea-wargames-01.webp?w=466&h=311&l=48&t=56&q=90&f=e57f9517cbe6598355a8ac5e07efba4b" alt="">
-                            <h5><span>FEATURES</span>&nbsp;WORLD</h5>
-                            <h6>Exclusive: While Everyone Focuses On Iran, US Military Prepares For Russia</h6>
+                        <div class="border-0 card col-sm-4 col-lg-4">
+                            <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1547486/lipschutz-living-room-hotel-chelsea.webp?w=397&h=265&f=fb4270bf5fbc2591cc43d24d0377621d" alt=""></a>
+                            <a href="#" class="text-decoration-none"><h5 class="text-decoration-none image-tag position-relative mt-n5 pt-4"><span class="text-danger bg-light text-decoration-none font-weight-bold border border-danger px-2">5</span></h5></a>
+                            <div class="card-body mt-3 p-0">
+                                <a href="#"><h5 class="card-title font-weight-bold p-0">Inside the Last Bohemian Apartments of the Storied Hotel Chelsea</h5></a>                    
+                            </div>
                         </div>
                     </div>
                     </section>
-                    <section class="us">
-                        <h4>U.S.</h4>
+                    <section class="us mt-4 border-bottom pb-2 mb-4">
+                        <h4 class="font-weight-bold text-danger">U.S.</h4>
                         <div class="row"> 
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565769/trump.webp?w=135&h=90&f=f409e980c09ca173dca4d4f748dadd00" alt="">
-                                    <h6>Trump 'Mocked Words of Jesus' in National Prayer Breakfast Speech: MSNBC</h6>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565775/ice-agent.webp?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f" alt="">
-                                    <h6>Doctors Protest Outside Hospital After ICE Agent Shoots 26-Year-Old In Face</h6>
+                            </div>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565757/justin-bieber.webp?w=135&h=90&f=a4d526599b13832cd45a0e451fe5e5d2" alt="">
-                                    <h6>Justin Bieber Donates $200,000 to Women's Shelter in New Single and Video</h6>
+                            </div>
+                            <div class="col-sm-4 col-lg-4">                                
+                                <div class="border-bottom media m-0 pb-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1567269/tourist-internatioanal-boryspil-airport-ukraine-january-2020.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">China's Hubei Province Orders Citizens to Stay Home Amid Coronavirus</h6></a>
+                                    </div>
+                                </div>
+                                <div class="border-bottom media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
+                                </div>
+                                <div class="media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="world">
-                        <h4>World</h4>
+                    <section class="world mt-4 border-bottom pb-2 mb-4">
+                        <h4 class="font-weight-bold text-danger">World</h4>
                         <div class="row"> 
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565769/trump.webp?w=135&h=90&f=f409e980c09ca173dca4d4f748dadd00" alt="">
-                                    <h6>Trump 'Mocked Words of Jesus' in National Prayer Breakfast Speech: MSNBC</h6>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565775/ice-agent.webp?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f" alt="">
-                                    <h6>Doctors Protest Outside Hospital After ICE Agent Shoots 26-Year-Old In Face</h6>
+                            </div>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565757/justin-bieber.webp?w=135&h=90&f=a4d526599b13832cd45a0e451fe5e5d2" alt="">
-                                    <h6>Justin Bieber Donates $200,000 to Women's Shelter in New Single and Video</h6>
+                            </div>
+                            <div class="col-sm-4 col-lg-4">
+                                <div class="border-bottom media m-0 pb-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1567269/tourist-internatioanal-boryspil-airport-ukraine-january-2020.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">China's Hubei Province Orders Citizens to Stay Home Amid Coronavirus</h6></a>
+                                    </div>
+                                </div>
+                                <div class="border-bottom media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
+                                </div>
+                                <div class="media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="business">
-                        <h4>Business</h4>
+                    <section class="business mt-4 border-bottom pb-2 mb-4">
+                        <h4 class="font-weight-bold text-danger">Business</h4>
                         <div class="row"> 
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565769/trump.webp?w=135&h=90&f=f409e980c09ca173dca4d4f748dadd00" alt="">
-                                    <h6>Trump 'Mocked Words of Jesus' in National Prayer Breakfast Speech: MSNBC</h6>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565775/ice-agent.webp?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f" alt="">
-                                    <h6>Doctors Protest Outside Hospital After ICE Agent Shoots 26-Year-Old In Face</h6>
+                            </div>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565757/justin-bieber.webp?w=135&h=90&f=a4d526599b13832cd45a0e451fe5e5d2" alt="">
-                                    <h6>Justin Bieber Donates $200,000 to Women's Shelter in New Single and Video</h6>
+                            </div>
+                            <div class="col-sm-4 col-lg-4">
+                                <div class="border-bottom media m-0 pb-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1567269/tourist-internatioanal-boryspil-airport-ukraine-january-2020.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">China's Hubei Province Orders Citizens to Stay Home Amid Coronavirus</h6></a>
+                                    </div>
+                                </div>
+                                <div class="border-bottom media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
+                                </div>
+                                <div class="media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="tech-and-science">
-                        <h4>Tech & Science</h4>
+                    <section class="tech-and-science mt-4 border-bottom pb-2 mb-4">
+                        <h4 class="font-weight-bold text-danger">Tech & Science</h4>
                         <div class="row"> 
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565769/trump.webp?w=135&h=90&f=f409e980c09ca173dca4d4f748dadd00" alt="">
-                                    <h6>Trump 'Mocked Words of Jesus' in National Prayer Breakfast Speech: MSNBC</h6>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565775/ice-agent.webp?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f" alt="">
-                                    <h6>Doctors Protest Outside Hospital After ICE Agent Shoots 26-Year-Old In Face</h6>
+                            </div>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565757/justin-bieber.webp?w=135&h=90&f=a4d526599b13832cd45a0e451fe5e5d2" alt="">
-                                    <h6>Justin Bieber Donates $200,000 to Women's Shelter in New Single and Video</h6>
+                            </div>
+                            <div class="col-sm-4 col-lg-4">
+                                <div class="border-bottom media m-0 pb-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1567269/tourist-internatioanal-boryspil-airport-ukraine-january-2020.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">China's Hubei Province Orders Citizens to Stay Home Amid Coronavirus</h6></a>
+                                    </div>
+                                </div>
+                                <div class="border-bottom media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
+                                </div>
+                                <div class="media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="culture">
-                        <h4>Culture</h4>
+                    <section class="culture mt-4 border-bottom pb-2 mb-4">
+                        <h4 class="font-weight-bold text-danger">Culture</h4>
                         <div class="row"> 
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565769/trump.webp?w=135&h=90&f=f409e980c09ca173dca4d4f748dadd00" alt="">
-                                    <h6>Trump 'Mocked Words of Jesus' in National Prayer Breakfast Speech: MSNBC</h6>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565775/ice-agent.webp?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f" alt="">
-                                    <h6>Doctors Protest Outside Hospital After ICE Agent Shoots 26-Year-Old In Face</h6>
+                            </div>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565757/justin-bieber.webp?w=135&h=90&f=a4d526599b13832cd45a0e451fe5e5d2" alt="">
-                                    <h6>Justin Bieber Donates $200,000 to Women's Shelter in New Single and Video</h6>
+                            </div>
+                            <div class="col-sm-4 col-lg-4">
+                                <div class="border-bottom media m-0 pb-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1567269/tourist-internatioanal-boryspil-airport-ukraine-january-2020.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">China's Hubei Province Orders Citizens to Stay Home Amid Coronavirus</h6></a>
+                                    </div>
+                                </div>
+                                <div class="border-bottom media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
+                                </div>
+                                <div class="media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section class="sports">
-                        <h4>Sports</h4>
+                    <section class="sports mt-4 border-bottom pb-2 mb-4">
+                        <h4 class="font-weight-bold text-danger">Sports</h4>
                         <div class="row"> 
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="https://d.newsweek.com/en/full/1565782/tornado-dodge-city-kansas-2016.webp?w=397&h=265&f=4ca155b8acb0d0f0d4f1185fe7a88477" alt="">
-                                <h6>Tornado Risk in Washington, D.C. and Northeast After Severe Thunderstorms</h6>
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565769/trump.webp?w=135&h=90&f=f409e980c09ca173dca4d4f748dadd00" alt="">
-                                    <h6>Trump 'Mocked Words of Jesus' in National Prayer Breakfast Speech: MSNBC</h6>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565775/ice-agent.webp?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f" alt="">
-                                    <h6>Doctors Protest Outside Hospital After ICE Agent Shoots 26-Year-Old In Face</h6>
+                            </div>
+                            <div class="border-0 card col-sm-4 col-lg-4">
+                                <a href="#" class="text-decoration-none"><img class="card-img-top m-0 p-0" src="https://d.newsweek.com/en/full/1566957/coronavirus-covid-19.webp?w=397&h=265&f=5777b99d98582d8b7a855a87d74b3f8d" alt=""></a>
+                                <div class="card-body mt-3 p-0">
+                                    <a href="#"><h5 class="card-title font-weight-bold p-0">China's Hubei Province Reports 14,840 New Coronavirus Cases, 242 New Deaths</h5></a>                    
                                 </div>
-                                <div>
-                                    <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1565757/justin-bieber.webp?w=135&h=90&f=a4d526599b13832cd45a0e451fe5e5d2" alt="">
-                                    <h6>Justin Bieber Donates $200,000 to Women's Shelter in New Single and Video</h6>
+                            </div>
+                            <div class="col-sm-4 col-lg-4">
+                                <div class="border-bottom media m-0 pb-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1567269/tourist-internatioanal-boryspil-airport-ukraine-january-2020.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">China's Hubei Province Orders Citizens to Stay Home Amid Coronavirus</h6></a>
+                                    </div>
+                                </div>
+                                <div class="border-bottom media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
+                                </div>
+                                <div class="media m-0 py-2">
+                                    <a href="#" class="text-decoration-none w-50"><img src="https://d.newsweek.com/en/full/1565616/bernie-sanders.webp" class="pr-2 img-fluid" alt=""></a>
+                                    <div class="mt-2 media-body m-0 p-0">
+                                        <a href="#" class=" text-decoration-none"><h6 class="font-weight-bold m-0 p-0">Bernie Sanders Declares Victory in Iowa Caucuses</h6></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <aside class="row">
-                        <article class="subscribe col-md-6">
-                            <h5>SUBSCRIBE</h5>
-                            <div>
-                            <img src="https://d.newsweek.com/en/full/1564924/february-14-2020-cover.jpg?w=170&q=95&f=c1d5601167747525a4d15e56749350ec" alt="">
-                            <h4>In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</h4>
-                            <p>All Access + Weekly Delivery. Choose A Membership That's Perfect for You!</p>
-                            <p>SUBSCRIBE ></p>
-                        </div>
+                    <aside class="row mt-0 pb-5 border-bottom">
+                        <article class="subscribe col-sm-12 col-lg-7">
+                            <h5 class="text-danger text-decoration-none">SUBSCRIBE</h5>
+                            <div class="card border-0 bg-light m-0 p-4">
+                                <div class="row no-gutters">
+                                  <div class="col-sm-4 col-lg-4">
+                                    <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1564924/february-14-2020-cover.jpg?w=170&q=95&f=c1d5601167747525a4d15e56749350ec" class="card-img" alt=""></a>
+                                    <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1566954/february-21-28-2020-cover.jpg?w=170&q=95&f=4266076976cfcb9a853392f06c8a02c1" class="card-img-overlay m-4 image-mag" alt=""></a>  
+                                </div>
+                                  <div class="col-sm-8 col-lg-8">
+                                    <div class="card-body ml-4">
+                                      <h4 class="card-title font-weight-bold">In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</h4>
+                                      <p class="card-text mb-5">All Access + Weekly Delivery. Choose A Membership That's Perfect for You!</p>
+                                      <a href="#" class="text-decoration-none"><h6 class="card-text"><span class="btn-danger p-2">SUBSCRIBE ></span></h6></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </article>
-                        <article class="subscribe col-md-6">
-                            <h5>NEWSLETTER</h5>
-                            <div>
-                            <img src="https://d.newsweek.com/en/full/1564924/february-14-2020-cover.jpg?w=170&q=95&f=c1d5601167747525a4d15e56749350ec" alt="">
-                            <h4>The Starting 5</h4>
-                            <p>Take back your inbox. Sign up for our newsletter and start making sense of the world around you.</p>
-                            <p>SIGN UP ></p>
-                        </div>
+                        <article class="subscribe col-sm-12 col-lg-5">
+                            <h5 class="text-danger text-decoration-none">NEWSLETTER</h5>
+                            <div class="card border">
+                                <div class="row no-gutters">
+                                  <div class="col-sm-6 col-lg-6">
+                                    <a href="#" class="text-decoration-none"><img src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5" style="height:100%;" class="card-img" alt=""></a>
+                                </div>
+                                  <div class="col-sm-6 col-lg-6">
+                                    <div class="card-body m-3">
+                                      <h4 class="card-title font-weight-bold">The Starting 5</h4>
+                                      <p class="card-text mt-4">Take back your inbox. Sign up for our newsletter and start making sense of the world around you.</p>
+                                      <a href="#" class="text-decoration-none"><h6 class="card-text mt-5"><span class="btn-danger p-2">SIGN UP ></span></h6></a>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </article>
                     </aside>
         </aside>
-        <footer>
-            <div class="row">
-                <div class="nav-logo col-md-4">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve"><g>
-                        <path class="st0 bottom-logo" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
-                        </g></svg>
+        <footer class="mt-5 display-block">
+            <nav class="border-bottom navlogo-row navbar navbar-expand d-flex flex-wrap">
+                <a class="nav-logo navbar-brand" href="#"><svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve"><g>
+                    <path class="st0 bottom-logo" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                    </g></svg>
+                </a>        
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link disabled text-nowrap" href="#">© 2020 NEWSWEEK</a>
+                    </li>
+                  </ul>
+                  <div class="d-flex flex-nowrap">
+                    <button class="btn my-2 my-sm-0"><i class="fab fa-facebook-square"></i></button>
+                    <button class="btn my-2 my-sm-0"><i class="fab fa-twitter"></i></button>
+                    <button class="btn my-2 my-sm-0"><i class="fab fa-instagram"></i></button>
+                    <button class="btn my-2 my-sm-0"><i class="fab fa-tumblr"></i></button>
+                    <button class="btn my-2 my-sm-0"><i class="fab fa-linkedin"></i></button>
                 </div>
-                <div class="social-icons col-md-8">
-                    <ul>
-                    <li><i class="fab fa-facebook-square"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-instagram"></i></li>
-                    <li><i class="fab fa-tumblr"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
+              </nav>
+            <nav class="navbar navbar-expand navbar-light mt-1 pl-3">
+                <ul class="navbar-nav navbar-left flex-wrap list-unstyled">
+                    <li class="nav-item nav-link text-dark disabled font-weight-bold">Editions: </li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">U.S. Edition</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">日本</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Pakistan</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Polska</a></li>
+                    <li class="nav-item text-nowrap"><a href="#" class="nav-link text-secondary text-decoration-none">România</a></li>
                 </ul>
-                </div>
-            </div>
-            <div class="second-row col-md-6">
-                <ul class="editions">
-                    <li>Editions: </li>
-                    <li>U.S. Edition</li>
-                    <li>日本</li>
-                    <li>Pakistan</li>
-                    <li>Polska</li>
-                    <li>România</li>
+            </nav>
+            <nav class="navbar navbar-expand flex-wrap navbar-light mt-1 pl-3">
+                <ul class="navbar-nav navbar-left d-flex flex-wrap list-unstyled">
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">About Us</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Corrections</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Contact Us</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Editorial Guidelines</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Advertise</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Copyright</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Terms & Conditions</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Privacy Policy</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Cookie Policy</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Terms of Sale</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Archive</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Announcements</a></li>
+                    <li class="nav-item text-nowrap border-right"><a href="#" class="nav-link text-secondary text-decoration-none">Consent preferences</a></li>
                 </ul>
-                <ul class="nav-bottom">
-                    <li>About Us</li>
-                    <li>Corrections</li>
-                    <li>Contact Us</li>
-                    <li>Editorial Guidelines</li>
-                    <li>Advertise</li>
-                    <li>Copyright</li>
-                    <li>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                    <li>Cookie Policy</li>
-                    <li>Terms of Sale</li>
-                    <li>Archive</li>
-                    <li>Announcements</li>
-                    <li>Consent preferences</li>
-                </ul>
-            </div>
+            </nav>
         </footer>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/a1f1d67c06.js" crossorigin="anonymous"></script>
 </html>

@@ -1,97 +1,104 @@
-body {
-    font-family: 'Roboto Condensed', Arial, sans-serif;
+@media only screen and (max-width: 992px) {
+    .featured-stories {
+        position: relative !important;
+    }
+
+    .header-date,
+    .header-right-lg {
+        display: none !important;
+    }
+
+    .in-the-mag {
+        flex-flow: wrap !important;
+    }
+
+    .image-mag {
+        display: none !important;
+    }
+
+    .bars {
+        display: inline !important;
+    }
+
+    .nav-bottom li {
+        border: none !important;
+    }
+
+    #Layer_1 {
+        float: left;
+        height: 55px;
+        width: 100px;
+    }
 }
 
-.container, .container-fluid {
-    margin: 0;
-    padding: 0;
+@media only screen and (min-width: 993px) {
+    .header-right-xs {
+        display: none !important;
+    }
+
+    #Layer_1 {
+        width: 400px;
+    }
 }
 
-.social-icons {
-   align-content: flex-end;
+@media only screen and (max-width: 576px) {
+    .culture-travel-big,
+    .bohemian {
+        display: none !important;
+    }
+
+    .top-story,
+    .culture-travel-small,
+    .featured-stories,
+    .more-stories {
+        padding: 0 15px;
+    }
+
+    .culture-travel-small {
+        display: block !important;
+    }
 }
 
-.social-icons ul {
-    display: flex;
-    list-style: none;
-    line-height: 24px;
+* {
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-
-img, .img-thumbnail {
-    float: left;
-    padding: 5%;
+.container-fluid {
+    max-width: 1310px;
 }
 
 .top-logo {
     fill: #fff;
-    padding-bottom: 15%;
 }
 
 .nav-logo {
     fill: #f72210;
+    max-width: 236px;
+    min-width: 236px;
 }
 
-.header-top {
-    background-color: #f72210;
-    padding: 0;
-    padding-top: 2%;
-    color: #fff;
+.bars,
+.culture-travel-small {
+    display: none;
 }
 
-.nav-bar-default {
-     border-bottom: 1px solid #000; /*#f4f5f6;; */
-}
-
-.col-1, .col-2 {
-    padding: 0;
-    padding-top: 2%;
-}
-
-.col-2 {
-    font-weight: 600;
-    text-align: right;
-}
-
-.col-2 span {
-    background-color: #fff;
-    color:  #f72210;
-}
-
-.first-row {
+h5,
+h6,
+.navbar-nav li a,
+.nav-bottom li a:hover {
     color: #000;
 }
 
-.page-nav {
-    border-bottom: 2px solid #f4f5f6;
-    padding: 0.5em 0;
-    display: flex;
-    list-style: "|";
-   
+h5:hover {
+    text-decoration: underline;
+    text-decoration-color: #f72210;
 }
 
-.page-nav li {
-    color: #f4f5f6;
-    width: fit-content;
-    line-height: 24px;
-    margin: 0 0.35em;
-    text-align: center;
-
+.navbar-nav li a:hover,
+a h6:hover {
+    color: #f72210;
 }
 
-.page-nav li a {
-    color: #000;
-    font-weight: 700;
-
-}
-
-
-.opinion img {
-    float: left;
-    fill: black;
-}
-
-
-main {
-    display: flex;
+.image-tag {
+    opacity: 0.8;
 }
