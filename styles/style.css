@@ -3,6 +3,11 @@
         position: relative !important;
     }
 
+    .header-date,
+    .header-right-lg {
+        display: none !important;
+    }
+
     .in-the-mag {
         flex-flow: wrap !important;
     }
@@ -17,6 +22,22 @@
 
     .nav-bottom li {
         border: none !important;
+    }
+
+    #Layer_1 {
+        float: left;
+        height: 55px;
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .header-right-xs {
+        display: none !important;
+    }
+
+    #Layer_1 {
+        width: 400px;
     }
 }
 
@@ -33,6 +54,10 @@
 
 * {
     font-family: "Roboto Condensed", sans-serif;
+}
+
+.container-fluid {
+    max-width: 1310px;
 }
 
 .top-logo {
